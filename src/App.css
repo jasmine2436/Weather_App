@@ -1,0 +1,155 @@
+
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(to top, #358c91, #2a5298);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 1s ease-in-out;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  min-height: 440px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in-out;
+}
+
+.app-name {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.city-search {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  border: 2px solid rgb(204, 204, 204);
+  outline: none;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #e5eef0;
+  padding: 12px 40px;
+  transition: width 0.4s ease-in-out;
+  color: #333;
+}
+
+.city-search:focus {
+  width: 100%;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #026997;
+}
+
+.city-name {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.date {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fffcfc;
+}
+
+.icon-temp {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.deg {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+
+.des-wind {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.error-message {
+  display: block;
+  text-align: center;
+  color: #d32f2f;
+  font-size: 24px;
+  margin-top: auto;
+}
+
+/* Cloud Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Background animations */
+@keyframes gradient-background {
+  0% {
+    background: linear-gradient(to top, #1e3c72, #2a5298);
+  }
+  50% {
+    background: linear-gradient(to top, #00c6ff, #0072ff);
+  }
+  100% {
+    background: linear-gradient(to top, #1e3c72, #2a5298);
+  }
+}
+
+html {
+  animation: gradient-background 10s ease infinite;
+}
